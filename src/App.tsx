@@ -192,11 +192,17 @@ function App() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-20">
               <div className="text-center">
                 <h1
+                  className="text-6xl font-extrabold text-white mb-6 minor-glow-text"
+                  style={{ animationDelay: '0.2s' }}
+                >
+                  AI Agent for Apache JMeter
+                </h1>
+                <h2
                   className="text-7xl font-extrabold text-white mb-6 glow-text"
                   style={{ animationDelay: '0.2s' }}
                 >
-                  JMeterAI: AI Agent for Apache JMeter
-                </h1>
+                 JMeterAI 
+                </h2>
                 <p
                   className="text-2xl text-cyan-200 mb-8 animate-typewriter"
                   style={{ animationDelay: '0.4s' }}
