@@ -8,7 +8,6 @@ import {
   Link,
   Monitor,
   Terminal,
-  Github,
   Twitter,
   Linkedin,
   Rocket,
@@ -150,7 +149,15 @@ function App() {
 
   const handleJoinWaitlist = () => {
     window.open(
-      'https://forms.gle/fPupfYePdgpWcD6r5',
+      'https://jmeterai.neeyatai.com/signup',
+      '_blank',
+      'noopener,noreferrer'
+    );
+  };
+
+  const handleLinkedIn = () => {
+    window.open(
+      'https://www.linkedin.com/company/vjaii' ,
       '_blank',
       'noopener,noreferrer'
     );
@@ -174,8 +181,6 @@ function App() {
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
-              <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
-              <a href="#documentation" className="text-gray-300 hover:text-white transition-colors">Documentation</a>
               <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
             </nav>
             
@@ -211,7 +216,7 @@ function App() {
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-5 rounded-full font-bold text-xl animate-gradient-sweep hover:scale-110 transition-all duration-300 inline-flex items-center"
                   style={{ animationDelay: '0.6s' }} onClick={handleJoinWaitlist}
                 >
-                  Join Waitlist
+                  Try free
                   <Rocket className="ml-3 h-6 w-6 animate-bounce" />
                   
                 </button>
@@ -271,6 +276,7 @@ function App() {
             <div className="flex justify-center gap-6">
               <button
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-full font-bold text-xl animate-gradient-sweep hover:scale-110 transition-all duration-300 inline-flex items-center"
+                onClick={handleJoinWaitlist}
               >
                 Start Free Trial
               </button>
@@ -293,38 +299,33 @@ function App() {
                   <span className="text-2xl font-bold text-white">JMeterAI</span>
                 </div>
                 <div className="flex space-x-6">
-                  <Github className="hover:text-cyan-400 cursor-pointer transition-colors" />
-                  <Twitter className="hover:text-cyan-400 cursor-pointer transition-colors" />
-                  <Linkedin className="hover:text-cyan-400 cursor-pointer transition-colors" />
+                  <Linkedin className="hover:text-cyan-400 cursor-pointer transition-colors" onClick={handleLinkedIn}/>
                 </div>
               </div>
               <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <h3 className="text-white font-semibold mb-6">Product</h3>
                 <ul className="space-y-4">
                   <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-                  <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
-                  <li><a href="#documentation" className="hover:text-white transition-colors">Documentation</a></li>
+                  
                 </ul>
               </div>
               <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <h3 className="text-white font-semibold mb-6">Company</h3>
                 <ul className="space-y-4">
                   <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+                  
                 </ul>
               </div>
               <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
                 <h3 className="text-white font-semibold mb-6">Support</h3>
                 <ul className="space-y-4">
                   <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Status</a></li>
+                  
                 </ul>
               </div>
             </div>
             <div className="mt-10 pt-10 border-t border-gray-700 text-center animate-fade-in" style={{ animationDelay: '1s' }}>
-              © 2024 JMeterAI. All rights reserved.
+              © 2025 Neeyat AI. All rights reserved.
             </div>
           </div>
         </footer>
