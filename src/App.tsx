@@ -8,7 +8,7 @@ import {
   Link,
   Monitor,
   Terminal,
-  Twitter,
+  MailSearch,
   Linkedin,
   Rocket,
 } from 'lucide-react';
@@ -157,10 +157,14 @@ function App() {
 
   const handleLinkedIn = () => {
     window.open(
-      'https://www.linkedin.com/company/vjaii' ,
+      'https://www.linkedin.com/company/vjaii',
       '_blank',
       'noopener,noreferrer'
     );
+  };
+
+  const handleEmail = () => {
+    window.location.href = 'mailto:viral@neeyatai.com';
   };
 
   return (
@@ -183,7 +187,6 @@ function App() {
               <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
               <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
             </nav>
-            
           </div>
         </div>
       </header>
@@ -191,7 +194,7 @@ function App() {
       {/* Content with proper padding to account for fixed header */}
       <div className="relative z-10">
         {/* Hero Section */}
-        <div className="pt-16"> {/* Added padding top to account for fixed header */}
+        <div className="pt-16">
           <div className="relative">
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-20">
@@ -214,11 +217,11 @@ function App() {
                 </p>
                 <button
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-5 rounded-full font-bold text-xl animate-gradient-sweep hover:scale-110 transition-all duration-300 inline-flex items-center"
-                  style={{ animationDelay: '0.6s' }} onClick={handleJoinWaitlist}
+                  style={{ animationDelay: '0.6s' }} 
+                  onClick={handleJoinWaitlist}
                 >
                   Try free
                   <Rocket className="ml-3 h-6 w-6 animate-bounce" />
-                  
                 </button>
               </div>
             </div>
@@ -250,19 +253,13 @@ function App() {
         {/* Stats Section */}
         <div id="pricing" className="bg-gradient-to-r from-[#1a1a3a] to-[#2a1a5a] text-white py-20 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              {[
-                { value: "Lean 6 Sigma Certified", delay: "0.2s" },
-                // Add more stats here if needed, e.g., { value: "99% Uptime", delay: "0.4s" }
-              ].map((stat, i) => (
-                <div
-                  key={i}
-                  className="p-8 bg-gray-900/70 backdrop-blur-md rounded-2xl hover:scale-110 transition-transform animate-fade-in"
-                  style={{ animationDelay: stat.delay }}
-                >
-                  <div className="text-5xl font-bold mb-4 text-cyan-300">{stat.value}</div>
-                </div>
-              ))}
+            <div className="flex justify-center">
+              <div
+                className="p-8 bg-gray-900/70 backdrop-blur-md rounded-2xl hover:scale-110 transition-transform animate-fade-in"
+                style={{ animationDelay: '0.2s' }}
+              >
+                <div className="text-5xl font-bold mb-4 text-cyan-300 text-center">Lean 6 Sigma Certified</div>
+              </div>
             </div>
           </div>
         </div>
@@ -292,35 +289,40 @@ function App() {
         {/* Footer */}
         <footer id="contact" className="bg-[#0a0a2a] text-gray-400 py-16 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-              <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="flex items-center mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
+              <div className="animate-fade-in text-center md:text-left" style={{ animationDelay: '0.2s' }}>
+                <div className="flex items-center justify-center md:justify-start mb-6">
                   <Bot className="h-10 w-10 text-cyan-500 mr-3" />
                   <span className="text-2xl font-bold text-white">JMeterAI</span>
                 </div>
-                <div className="flex space-x-6">
-                  <Linkedin className="hover:text-cyan-400 cursor-pointer transition-colors" onClick={handleLinkedIn}/>
+                <div className="flex justify-center md:justify-start space-x-6">
+                  <Linkedin 
+                    className="hover:text-cyan-400 cursor-pointer transition-colors" 
+                    onClick={handleLinkedIn}
+                  />
+                  <MailSearch 
+                    className="hover:text-cyan-400 cursor-pointer transition-colors" 
+                    onClick={handleEmail}
+                  />
                 </div>
               </div>
-              <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="animate-fade-in text-center" style={{ animationDelay: '0.4s' }}>
                 <h3 className="text-white font-semibold mb-6">Product</h3>
                 <ul className="space-y-4">
                   <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-                  
                 </ul>
               </div>
-              <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                <h3 className="text-white font-semibold mb-6">Company</h3>
-                <ul className="space-y-4">
-                  <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                  
-                </ul>
-              </div>
-              <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <div className="animate-fade-in text-center" style={{ animationDelay: '0.6s' }}>
                 <h3 className="text-white font-semibold mb-6">Support</h3>
                 <ul className="space-y-4">
-                  <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-                  
+                  <li>
+                    <a 
+                      href="mailto:viral@neeyatai.com" 
+                      className="hover:text-white transition-colors"
+                    >
+                      viral@neeyatai.com
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
