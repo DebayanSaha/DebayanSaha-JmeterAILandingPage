@@ -149,7 +149,7 @@ function App() {
 
   const handleJoinWaitlist = () => {
     window.open(
-      'https://jmeterai.neeyatai.com/signup',
+      'https://kickload.neeyatai.com/signup',
       '_blank',
       'noopener,noreferrer'
     );
