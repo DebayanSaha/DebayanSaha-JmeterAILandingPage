@@ -167,6 +167,14 @@ function App() {
     window.location.href = 'mailto:viral@neeyatai.com';
   };
 
+  const handleLogin = () => {
+    window.open(
+      'https://kickload.neeyatai.com/login',
+      '_blank',
+      'noopener,noreferrer'
+    );
+  };
+
   return (
     <div className="min-h-screen text-white relative">
       {/* Background animation spans the entire viewport */}
@@ -186,6 +194,7 @@ function App() {
             <nav className="hidden md:flex space-x-8">
               <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
               <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+              <a href="#pricing" className="text-gray-300 hover:text-white transition-colors" onClick={handleLogin}>Log In</a>
             </nav>
           </div>
         </div>
@@ -202,7 +211,7 @@ function App() {
                 <h1
                   className="text-6xl font-extrabold text-white mb-8 glow-text-subtle"
                   style={{ animationDelay: '0.2s' }}>
-                  AI Agent for Apache JMeter
+                  AI based Performance Testing
                 </h1>
                 <h2
                   className="text-7xl font-extrabold text-white mb-6 glow-text-strong"
