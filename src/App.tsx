@@ -112,13 +112,13 @@ function App() {
     {
       icon: Terminal,
       title: "Automated Test Creation",
-      description: "Write prompts and JMeterAI will generate test plans for JMeter automatically",
+      description: "Write prompts and KickLoad will generate test plans automatically",
       image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     },
     {
       icon: PlayCircle,
       title: "Run Tests",
-      description: "Select JMX files and JMeterAI will execute tests with optimal configurations",
+      description: "Select JMX files and KickLoad will execute tests with optimal configurations",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -181,7 +181,7 @@ function App() {
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <Bot className="h-8 w-8 text-orange-500 mr-2" />
-              <span className="text-xl font-bold text-white">JMeterAI</span>
+              <span className="text-xl font-bold text-white">KickLoad</span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
@@ -207,7 +207,7 @@ function App() {
                 <h2
                   className="text-7xl font-extrabold text-white mb-6 glow-text-strong"
                   style={{ animationDelay: '0.2s' }}>
-                 JMeterAI 
+                 KickLoad 
                 </h2>
                 <p
                   className="text-2xl text-cyan-200 mb-8 animate-typewriter"
@@ -293,7 +293,7 @@ function App() {
               <div className="animate-fade-in text-center md:text-left" style={{ animationDelay: '0.2s' }}>
                 <div className="flex items-center justify-center md:justify-start mb-6">
                   <Bot className="h-10 w-10 text-cyan-500 mr-3" />
-                  <span className="text-2xl font-bold text-white">JMeterAI</span>
+                  <span className="text-2xl font-bold text-white">KickLoad</span>
                 </div>
                 <div className="flex justify-center md:justify-start space-x-6">
                   <Linkedin 
