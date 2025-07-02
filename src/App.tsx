@@ -32,24 +32,24 @@ interface ServiceCardProps {
 function ServiceCard({ icon: Icon, title, description, image, index }: ServiceCardProps) {
   return (
     <div
-      className="relative group bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden hover:-translate-y-2 animate-scale-in card-neon-border"
-      style={{ animationDelay: `${index * 0.1}s` }}
+      className="relative group bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden hover:-translate-y-2 animate-scale-in card-neon-border flex flex-col h-full"
+      style={{ animationDelay: `${index * 0.1}s`, minHeight: '420px' }} // You can adjust minHeight as needed
     >
-      <div className="w-full h-48 overflow-hidden">
+      <div className="w-full h-48 overflow-hidden flex-shrink-0">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
         />
       </div>
-      <div className="p-8 relative">
+      <div className="p-8 relative flex flex-col flex-1">
         <div className="absolute -top-6 left-6">
           <div className="h-12 w-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg card-icon-spin">
             <Icon className="h-6 w-6 text-white" />
           </div>
         </div>
         <h3 className="text-2xl font-bold mb-3 text-gray-100 mt-6">{title}</h3>
-        <p className="text-gray-300 leading-relaxed">{description}</p>
+        <p className="text-gray-300 leading-relaxed flex-1">{description}</p>
       </div>
     </div>
   );
@@ -332,25 +332,25 @@ function App() {
 
         {/* Services Grid */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative z-10" style={{ 
-                background: 'linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045)',
-                position: 'relative'
-              }}
+        background: 'linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045)',
+        position: 'relative'
+      }}
+>
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-5xl font-bold text-cyan-300 text-center mb-16 animate-fade-in">Our Services</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className="animate-fade-in h-full flex"
+          style={{ animationDelay: `${index * 0.1}s` }}
         >
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl font-bold text-cyan-300 text-center mb-16 animate-fade-in">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <ServiceCard {...service} index={index} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+          <ServiceCard {...service} index={index} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* Stats Section */}
         <div className="bg-gradient-to-r from-[#1a1a3a] to-[#2a1a5a] text-white py-20 relative z-10">
