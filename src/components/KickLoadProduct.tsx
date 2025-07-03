@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
-  Bot,
   PlayCircle,
   Brain,
   Mail,
@@ -95,99 +94,96 @@ export function KickLoadProduct() {
   };
 
   return (
-    <div className="min-h-screen text-white relative">
-      {/* Content with proper padding to account for fixed header */}
-      <div className="relative z-10">
-        {/* Hero Section */}
-        <div className="pt-16">
-          <div className="relative">
-            <div className="absolute inset-0 bg-black/40"></div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-20">
-              <div className="text-center">
-                <h1
-                  className="text-6xl font-extrabold text-white mb-8 glow-text-subtle"
-                  style={{ animationDelay: '0.2s' }}>
-                  AI based Performance Testing
-                </h1>
-                <h2
-                  className="text-7xl font-extrabold text-white mb-6 glow-text-strong"
-                  style={{ animationDelay: '0.2s' }}>
-                 KickLoad 
-                </h2>
-                <p
-                  className="text-2xl text-cyan-200 mb-8 animate-typewriter"
-                  style={{ animationDelay: '0.4s' }}
-                >
-                  Performance testing made easy with artificial intelligence
-                </p>
-                <button
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-5 rounded-full font-bold text-xl animate-gradient-sweep hover:scale-110 transition-all duration-300 inline-flex items-center"
-                  style={{ animationDelay: '0.6s' }} 
-                  onClick={handleJoinWaitlist}
-                >
-                  Try free
-                  <Rocket className="ml-3 h-6 w-6 animate-bounce" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Features Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10" style={{ 
-                background: 'linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045)',
-                position: 'relative'
-              }}
-        >
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl font-bold text-cyan-300 text-center mb-16 animate-fade-in">Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <FeatureCard {...feature} index={index} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <div className="bg-gradient-to-r from-[#1a1a3a] to-[#2a1a5a] text-white py-20 relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-center">
-              <div
-                className="p-8 bg-gray-900/70 backdrop-blur-md rounded-2xl hover:scale-110 transition-transform animate-fade-in"
-                style={{ animationDelay: '0.2s' }}
+    <div className="relative z-10">
+      {/* Hero Section */}
+      <div className="pt-16">
+        <div className="relative">
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-20">
+            <div className="text-center">
+              <h1
+                className="text-6xl font-extrabold text-white mb-8 glow-text-subtle"
+                style={{ animationDelay: '0.2s' }}>
+                AI based Performance Testing
+              </h1>
+              <h2
+                className="text-7xl font-extrabold text-white mb-6 glow-text-strong"
+                style={{ animationDelay: '0.2s' }}>
+               KickLoad 
+              </h2>
+              <p
+                className="text-2xl text-cyan-200 mb-8 animate-typewriter"
+                style={{ animationDelay: '0.4s' }}
               >
-                <div className="text-5xl font-bold mb-4 text-cyan-300 text-center">Lean 6 Sigma Certified</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-[#0a0a2a] text-white py-20 relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-            <h2 className="text-5xl font-bold text-cyan-300 mb-12 animate-fade-in">
-              Ready to transform your performance testing?
-            </h2>
-            <div className="flex justify-center gap-6">
+                Performance testing made easy with artificial intelligence
+              </p>
               <button
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-full font-bold text-xl animate-gradient-sweep hover:scale-110 transition-all duration-300 inline-flex items-center"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-5 rounded-full font-bold text-xl animate-gradient-sweep hover:scale-110 transition-all duration-300 inline-flex items-center"
+                style={{ animationDelay: '0.6s' }} 
                 onClick={handleJoinWaitlist}
               >
-                Start Free Trial
-              </button>
-              <button
-                className="bg-transparent border-2 border-cyan-500 text-cyan-500 px-10 py-5 rounded-full font-bold hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-110"
-              >
-                Watch Demo
+                Try free
+                <Rocket className="ml-3 h-6 w-6 animate-bounce" />
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10" style={{ 
+              background: 'linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045)',
+              position: 'relative'
+            }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl font-bold text-cyan-300 text-center mb-16 animate-fade-in">Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <FeatureCard {...feature} index={index} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <div className="bg-gradient-to-r from-[#1a1a3a] to-[#2a1a5a] text-white py-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center">
+            <div
+              className="p-8 bg-gray-900/70 backdrop-blur-md rounded-2xl hover:scale-110 transition-transform animate-fade-in"
+              style={{ animationDelay: '0.2s' }}
+            >
+              <div className="text-5xl font-bold mb-4 text-cyan-300 text-center">Lean 6 Sigma Certified</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-[#0a0a2a] text-white py-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <h2 className="text-5xl font-bold text-cyan-300 mb-12 animate-fade-in">
+            Ready to transform your performance testing?
+          </h2>
+          <div className="flex justify-center gap-6">
+            <button
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-full font-bold text-xl animate-gradient-sweep hover:scale-110 transition-all duration-300 inline-flex items-center"
+              onClick={handleJoinWaitlist}
+            >
+              Start Free Trial
+            </button>
+            <button
+              className="bg-transparent border-2 border-cyan-500 text-cyan-500 px-10 py-5 rounded-full font-bold hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-110"
+            >
+              Watch Demo
+            </button>
           </div>
         </div>
       </div>
