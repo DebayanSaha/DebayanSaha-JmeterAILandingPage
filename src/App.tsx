@@ -91,7 +91,11 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center cursor-pointer" onClick={handleHomeClick}>
-            <Bot className="h-8 w-8 text-cyan-500 mr-2" />
+            {isKickLoadPage ? (
+              <img src="/images/kickload.png" alt="KickLoad Logo" className="h-8 w-8 mr-2" />
+            ) : (
+              <img src="/images/neeyatai.png" alt="Neeyat AI Logo" className="h-8 w-8 mr-2" />
+            )}
             <span className="text-xl font-bold text-white">
               {isKickLoadPage ? 'KickLoad' : 'Neeyat AI'}
             </span>
@@ -120,9 +124,6 @@ function Header() {
                     >
                       KickLoad
                     </button>
-                    <div className="px-4 py-2 text-gray-500 text-sm">
-                      More products coming soon...
-                    </div>
                   </div>
                 </div>
               )}
@@ -162,7 +163,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="animate-fade-in col-span-1 md:col-span-2" style={{ animationDelay: '0.2s' }}>
             <div className="flex items-center mb-6">
-              <Bot className="h-10 w-10 text-cyan-500 mr-3" />
+              <img src="/images/neeyatai.png" alt="Neeyat AI Logo" className="h-10 w-10 mr-3" />
               <span className="text-2xl font-bold text-white">Neeyat AI</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
