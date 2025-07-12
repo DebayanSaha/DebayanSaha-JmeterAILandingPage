@@ -84,6 +84,20 @@ function Header() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleFeaturesClick = () => {
+    if (isKickLoadPage) {
+      const featuresSection = document.getElementById('features');
+      if (featuresSection) {
+        featuresSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   const isKickLoadPage = location.pathname === '/kickload';
 
   return (
@@ -128,7 +142,12 @@ function Header() {
                 </div>
               )}
             </div>
-            <a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a>
+            <button 
+              onClick={handleFeaturesClick}
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              {isKickLoadPage ? 'Features' : 'Services'}
+            </button>
             <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
           </nav>
         </div>

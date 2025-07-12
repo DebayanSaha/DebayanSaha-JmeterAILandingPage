@@ -131,7 +131,7 @@ export function KickLoadProduct() {
       </div>
 
       {/* Features Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10" style={{ 
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 relative z-10" style={{ 
               background: 'linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045)',
               position: 'relative'
             }}
