@@ -428,7 +428,7 @@ function HomePage() {
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-full font-bold text-xl animate-gradient-sweep hover:scale-110 transition-all duration-300 inline-flex items-center"
               onClick={handleGetStarted}
             >
-              Start Free Trial
+              View Product
               <Rocket className="ml-3 h-6 w-6" />
             </button>
             <button
