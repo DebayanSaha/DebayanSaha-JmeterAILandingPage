@@ -149,6 +149,14 @@ function Header() {
               {isKickLoadPage ? 'Features' : 'Services'}
             </button>
             <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+            {isKickLoadPage && (
+              <button
+                onClick={() => window.open('https://kickload.neeyatai.com/login', '_blank', 'noopener,noreferrer')}
+                className="text-gray-300 hover:text-white transition-colors ml-2"
+              >
+                Login
+              </button>
+            )}
           </nav>
         </div>
       </div>
