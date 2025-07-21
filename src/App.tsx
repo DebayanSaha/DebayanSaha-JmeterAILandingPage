@@ -62,7 +62,7 @@ function Header() {
   const location = useLocation();
 
   const handleContactUs = () => {
-    window.location.href = 'mailto:viral@neeyatai.com';
+    window.location.href = 'mailto:neeyatai.help@gmail.com';
   };
 
   const handleLinkedIn = () => {
@@ -168,7 +168,7 @@ function Footer() {
   const navigate = useNavigate();
 
   const handleContactUs = () => {
-    window.location.href = 'mailto:viral@neeyatai.com';
+    window.location.href = 'mailto:neeyatai.help@gmail.com';
   };
 
   const handleLinkedIn = () => {
@@ -227,10 +227,10 @@ function Footer() {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="mailto:viral@neeyatai.com" 
+                  href="mailto:neeyatai.help@gmail.com" 
                   className="hover:text-white transition-colors"
                 >
-                  viral@neeyatai.com
+                  neeyatai.help@gmail.com
                 </a>
               </li>
               <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
@@ -295,7 +295,7 @@ function HomePage() {
   ];
 
   const handleContactUs = () => {
-    window.location.href = 'mailto:viral@neeyatai.com';
+    window.location.href = 'mailto:neeyatai.help@gmail.com';
   };
 
   const handleGetStarted = () => {
